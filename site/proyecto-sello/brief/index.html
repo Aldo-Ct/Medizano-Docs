@@ -1,0 +1,1113 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación del Proyecto Sello - MediZano">
+      
+      
+      
+        <link rel="canonical" href="https://aldo-ct.github.io/Medizano-Docs/proyecto-sello/brief/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Brief técnico - MediZano</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#brief-tecnico-del-proyecto-sello" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MediZano" class="md-header__button md-logo" aria-label="MediZano" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MediZano
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Brief técnico
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aldo-Ct/Medizano-Docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aldo-Ct/Medizano-Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MediZano" class="md-nav__button md-logo" aria-label="MediZano" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MediZano
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aldo-Ct/Medizano-Docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aldo-Ct/Medizano-Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Proyecto Sello
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guía de Proyecto Sello
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brief técnico
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brief técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-datos-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Datos del equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dominio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dominio del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-microservicios-previstos-y-alcance-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Microservicios previstos y alcance esperado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Microservicios previstos y alcance esperado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-orden-ms-integrante-aldo-calla-ticona-tipo-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: orden-ms (integrante: Aldo Calla Ticona · tipo: transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-catalogo-ms-integrante-aldo-calla-ticona-tipo-no-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: catalogo-ms (integrante: Aldo Calla Ticona · tipo: no transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-pago-ms-integrante-igarlos-ruben-mamani-quispe-tipo-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: pago-ms (integrante: Igarlos Ruben Mamani Quispe · tipo: transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-auth-ms-integrante-igarlos-ruben-mamani-quispe-tipo-no-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: auth-ms (integrante: Igarlos Ruben Mamani Quispe · tipo: no transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-inventario-ms-integrante-kengui-p-calsin-mamani-tipo-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: inventario-ms (integrante: Kengui P. Calsin Mamani · tipo: transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-cliente-ms-integrante-kengui-p-calsin-mamani-tipo-no-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: cliente-ms (integrante: Kengui P. Calsin Mamani · tipo: no transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-aprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Aprobación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-datos-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Datos del equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dominio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dominio del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-microservicios-previstos-y-alcance-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Microservicios previstos y alcance esperado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Microservicios previstos y alcance esperado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-orden-ms-integrante-aldo-calla-ticona-tipo-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: orden-ms (integrante: Aldo Calla Ticona · tipo: transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-catalogo-ms-integrante-aldo-calla-ticona-tipo-no-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: catalogo-ms (integrante: Aldo Calla Ticona · tipo: no transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-pago-ms-integrante-igarlos-ruben-mamani-quispe-tipo-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: pago-ms (integrante: Igarlos Ruben Mamani Quispe · tipo: transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-auth-ms-integrante-igarlos-ruben-mamani-quispe-tipo-no-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: auth-ms (integrante: Igarlos Ruben Mamani Quispe · tipo: no transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-inventario-ms-integrante-kengui-p-calsin-mamani-tipo-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: inventario-ms (integrante: Kengui P. Calsin Mamani · tipo: transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservicio-cliente-ms-integrante-kengui-p-calsin-mamani-tipo-no-transaccional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservicio: cliente-ms (integrante: Kengui P. Calsin Mamani · tipo: no transaccional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-aprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Aprobación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="brief-tecnico-del-proyecto-sello">Brief Técnico del Proyecto Sello</h1>
+<p>Este documento es el punto donde el equipo declara, por escrito, qué sistema distribuido desarrollará durante el ciclo.</p>
+<p>MediZano se adapta al dominio de comercio electrónico, manteniendo el flujo de negocio principal <strong>catálogo → orden → pago</strong> e integrando un servicio externo real.</p>
+<hr />
+<h2 id="1-datos-del-equipo">1. Datos del equipo</h2>
+<ul>
+<li><strong>Nombre del equipo:</strong> MediZano</li>
+<li><strong>Sección:</strong> —</li>
+<li><strong>Repositorio (URL):</strong> https://github.com/rbn-69-cod/MediZano.git</li>
+<li><strong>Topics del repositorio configurados (sí/no):</strong> No — pendiente configurar <code>grupo-&lt;numero&gt;-medizano</code></li>
+</ul>
+<p>Integrantes:</p>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Rol o énfasis previsto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aldo Calla Ticona</td>
+<td>Backend y frontend</td>
+</tr>
+<tr>
+<td>Igarlos Ruben Mamani Quispe</td>
+<td>Seguridad e integración de pagos</td>
+</tr>
+<tr>
+<td>Kengui P. Calsin Mamani</td>
+<td>Inventario y gestión de clientes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-dominio-del-proyecto">2. Dominio del proyecto</h2>
+<ul>
+<li>
+<p><strong>Nombre del proyecto:</strong> MediZano</p>
+</li>
+<li>
+<p><strong>Problema o necesidad que resuelve (2-4 líneas):</strong><br />
+  MediZano busca facilitar la venta en línea de productos farmacéuticos y de botica, permitiendo que los clientes consulten productos disponibles y realicen pedidos desde una plataforma web. Además, busca integrar las ventas con el control de inventario para mantener actualizado el stock de los productos.</p>
+</li>
+<li>
+<p><strong>Dominio de negocio:</strong><br />
+  Comercio electrónico orientado a productos farmacéuticos y de botica.</p>
+</li>
+</ul>
+<p><strong>Flujo de extremo a extremo:</strong><br />
+  catálogo → orden → pago → confirmación → actualización de inventario.</p>
+<ul>
+<li><strong>Usuarios / actores principales:</strong></li>
+<li><code>CLIENTE</code></li>
+<li><code>ADMIN</code></li>
+<li>
+<p><code>ALMACEN</code></p>
+</li>
+<li>
+<p><strong>Servicio externo real que integra el proyecto:</strong><br />
+<strong>Mercado Pago</strong>, utilizado como pasarela externa para procesar los pagos de las órdenes realizadas mediante MediZano.</p>
+</li>
+<li>
+<p><strong>¿Continúa un proyecto de un ciclo anterior, o es un dominio nuevo?</strong><br />
+  Sí. MediZano continúa un proyecto desarrollado anteriormente en el curso de <strong>Lenguaje de Programación II</strong>.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-microservicios-previstos-y-alcance-esperado">3. Microservicios previstos y alcance esperado</h2>
+<p>Cada integrante tendrá dos microservicios. De los dos, al menos uno será transaccional.</p>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Microservicio transaccional</th>
+<th>Microservicio no transaccional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aldo Calla Ticona</td>
+<td><code>orden-ms</code></td>
+<td><code>catalogo-ms</code></td>
+</tr>
+<tr>
+<td>Igarlos Ruben Mamani Quispe</td>
+<td><code>pago-ms</code></td>
+<td><code>auth-ms</code></td>
+</tr>
+<tr>
+<td>Kengui P. Calsin Mamani</td>
+<td><code>inventario-ms</code></td>
+<td><code>cliente-ms</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="microservicio-orden-ms-integrante-aldo-calla-ticona-tipo-transaccional">Microservicio: <code>orden-ms</code> (integrante: Aldo Calla Ticona · tipo: transaccional)</h3>
+<ul>
+<li>
+<p><strong>Descripción breve (2-3 líneas):</strong><br />
+  Gestiona las órdenes de compra realizadas por los clientes. Registra la cabecera de la orden y los productos incluidos en cada pedido, calcula el total y mantiene el estado de la compra.</p>
+</li>
+<li>
+<p><strong>Entidad principal o cabecera-detalle:</strong><br />
+<code>Orden</code> / <code>DetalleOrden</code></p>
+</li>
+<li>
+<p><strong>Datos iniciales previstos:</strong></p>
+</li>
+<li><code>Orden</code>: id, clienteId, total, estado.</li>
+<li>
+<p><code>DetalleOrden</code>: productoId, cantidad, precioUnitario.</p>
+</li>
+<li>
+<p><strong>Endpoints iniciales previstos:</strong></p>
+</li>
+<li><code>POST /api/v1/ordenes</code></li>
+<li><code>GET /api/v1/ordenes/{id}</code></li>
+<li>
+<p><code>GET /api/v1/ordenes/cliente/{clienteId}</code></p>
+</li>
+<li>
+<p><strong>¿Se comunica con otro microservicio del equipo? ¿Cómo?</strong><br />
+  Sí. Se comunicará de forma síncrona mediante REST/Feign con <code>catalogo-ms</code> para consultar la información de los productos y con <code>pago-ms</code> para gestionar el proceso de pago.</p>
+</li>
+<li>
+<p><strong>¿Qué rutas quedan protegidas y con qué rol(es)?</strong></p>
+</li>
+<li>Crear una orden: <code>CLIENTE</code></li>
+<li>Consultar órdenes propias: <code>CLIENTE</code></li>
+<li>
+<p>Consultar todas las órdenes: <code>ADMIN</code></p>
+</li>
+<li>
+<p><strong>Lista inicial de requisitos:</strong></p>
+</li>
+<li>El sistema debe permitir crear una orden con uno o más productos.</li>
+<li>El sistema debe calcular el total de la orden a partir de sus detalles.</li>
+<li>El sistema debe permitir consultar el estado de una orden.</li>
+</ul>
+<hr />
+<h3 id="microservicio-catalogo-ms-integrante-aldo-calla-ticona-tipo-no-transaccional">Microservicio: <code>catalogo-ms</code> (integrante: Aldo Calla Ticona · tipo: no transaccional)</h3>
+<ul>
+<li>
+<p><strong>Descripción breve (2-3 líneas):</strong><br />
+  Gestiona el catálogo de productos disponibles en MediZano. Proporciona la información necesaria para que los clientes puedan consultar los productos ofrecidos en la plataforma.</p>
+</li>
+<li>
+<p><strong>Entidad principal:</strong><br />
+<code>Producto</code> / <code>Categoria</code></p>
+</li>
+<li>
+<p><strong>Datos iniciales previstos:</strong></p>
+</li>
+<li><code>Producto</code>: id, nombre, precio.</li>
+<li>
+<p><code>Categoria</code>: id, nombre, descripcion.</p>
+</li>
+<li>
+<p><strong>Endpoints iniciales previstos:</strong></p>
+</li>
+<li><code>GET /api/v1/productos</code></li>
+<li><code>GET /api/v1/productos/{id}</code></li>
+<li>
+<p><code>POST /api/v1/productos</code></p>
+</li>
+<li>
+<p><strong>¿Se comunica con otro microservicio del equipo? ¿Cómo?</strong><br />
+  Sí. <code>orden-ms</code> consultará <code>catalogo-ms</code> mediante REST/Feign para obtener la información de los productos incluidos en una orden.</p>
+</li>
+<li>
+<p><strong>¿Qué rutas quedan protegidas y con qué rol(es)?</strong></p>
+</li>
+<li>Consultar catálogo: público.</li>
+<li>Consultar producto: público.</li>
+<li>
+<p>Registrar y modificar productos: <code>ADMIN</code>.</p>
+</li>
+<li>
+<p><strong>Lista inicial de requisitos:</strong></p>
+</li>
+<li>El sistema debe permitir consultar los productos disponibles.</li>
+<li>El sistema debe permitir organizar los productos por categorías.</li>
+<li>El sistema debe permitir al administrador registrar y modificar productos.</li>
+</ul>
+<hr />
+<h3 id="microservicio-pago-ms-integrante-igarlos-ruben-mamani-quispe-tipo-transaccional">Microservicio: <code>pago-ms</code> (integrante: Igarlos Ruben Mamani Quispe · tipo: transaccional)</h3>
+<ul>
+<li>
+<p><strong>Descripción breve (2-3 líneas):</strong><br />
+  Gestiona los pagos correspondientes a las órdenes de MediZano e integra el sistema con la API externa de Mercado Pago. Registra el resultado de cada operación y permite conocer el estado del pago.</p>
+</li>
+<li>
+<p><strong>Entidad principal o cabecera-detalle:</strong><br />
+<code>Pago</code> / <code>DetallePago</code></p>
+</li>
+<li>
+<p><strong>Datos iniciales previstos:</strong></p>
+</li>
+<li><code>Pago</code>: id, ordenId, monto, estado.</li>
+<li>
+<p><code>DetallePago</code>: id, pagoId, referenciaExterna.</p>
+</li>
+<li>
+<p><strong>Endpoints iniciales previstos:</strong></p>
+</li>
+<li><code>POST /api/v1/pagos</code></li>
+<li><code>GET /api/v1/pagos/{id}</code></li>
+<li>
+<p><code>GET /api/v1/pagos/orden/{ordenId}</code></p>
+</li>
+<li>
+<p><strong>¿Se comunica con otro microservicio del equipo? ¿Cómo?</strong><br />
+  Sí. Se comunicará con <code>orden-ms</code> mediante REST/Feign y consumirá la API externa real de Mercado Pago.</p>
+</li>
+<li>
+<p><strong>¿Qué rutas quedan protegidas y con qué rol(es)?</strong></p>
+</li>
+<li>Generar pago: <code>CLIENTE</code></li>
+<li>Consultar pago propio: <code>CLIENTE</code></li>
+<li>
+<p>Consultar todos los pagos: <code>ADMIN</code></p>
+</li>
+<li>
+<p><strong>Lista inicial de requisitos:</strong></p>
+</li>
+<li>El sistema debe permitir generar un pago asociado a una orden.</li>
+<li>El sistema debe integrar el proceso de pago con Mercado Pago.</li>
+<li>El sistema debe registrar el estado del pago como pendiente, aprobado o rechazado.</li>
+</ul>
+<hr />
+<h3 id="microservicio-auth-ms-integrante-igarlos-ruben-mamani-quispe-tipo-no-transaccional">Microservicio: <code>auth-ms</code> (integrante: Igarlos Ruben Mamani Quispe · tipo: no transaccional)</h3>
+<ul>
+<li>
+<p><strong>Descripción breve (2-3 líneas):</strong><br />
+  Gestiona la autenticación y autorización de los usuarios de MediZano. Permite controlar el acceso a las funcionalidades del sistema mediante JWT y roles.</p>
+</li>
+<li>
+<p><strong>Entidad principal:</strong><br />
+<code>Usuario</code> / <code>Rol</code></p>
+</li>
+<li>
+<p><strong>Datos iniciales previstos:</strong></p>
+</li>
+<li><code>Usuario</code>: id, username, password.</li>
+<li>
+<p><code>Rol</code>: id, nombre, descripcion.</p>
+</li>
+<li>
+<p><strong>Endpoints iniciales previstos:</strong></p>
+</li>
+<li><code>POST /api/v1/auth/login</code></li>
+<li>
+<p><code>POST /api/v1/auth/register</code></p>
+</li>
+<li>
+<p><strong>¿Se comunica con otro microservicio del equipo? ¿Cómo?</strong><br />
+  Todos los microservicios utilizarán el token JWT para validar la identidad del usuario y sus permisos.</p>
+</li>
+<li>
+<p><strong>¿Qué rutas quedan protegidas y con qué rol(es)?</strong></p>
+</li>
+<li>Login: público.</li>
+<li>Registro de cliente: público.</li>
+<li>Funciones administrativas: <code>ADMIN</code>.</li>
+<li>
+<p>Todos los servicios validarán JWT en sus rutas protegidas.</p>
+</li>
+<li>
+<p><strong>Lista inicial de requisitos:</strong></p>
+</li>
+<li>El sistema debe permitir autenticar usuarios mediante credenciales.</li>
+<li>El sistema debe generar un token JWT después de una autenticación válida.</li>
+<li>El sistema debe restringir funcionalidades según el rol del usuario.</li>
+</ul>
+<hr />
+<h3 id="microservicio-inventario-ms-integrante-kengui-p-calsin-mamani-tipo-transaccional">Microservicio: <code>inventario-ms</code> (integrante: Kengui P. Calsin Mamani · tipo: transaccional)</h3>
+<ul>
+<li>
+<p><strong>Descripción breve (2-3 líneas):</strong><br />
+  Gestiona las existencias de los productos de MediZano mediante movimientos de entrada y salida. Permite mantener actualizado el stock después de las operaciones realizadas en el sistema.</p>
+</li>
+<li>
+<p><strong>Entidad principal o cabecera-detalle:</strong><br />
+<code>MovimientoInventario</code> / <code>DetalleMovimiento</code></p>
+</li>
+<li>
+<p><strong>Datos iniciales previstos:</strong></p>
+</li>
+<li><code>MovimientoInventario</code>: id, fecha, tipoMovimiento.</li>
+<li>
+<p><code>DetalleMovimiento</code>: productoId, cantidad, lote.</p>
+</li>
+<li>
+<p><strong>Endpoints iniciales previstos:</strong></p>
+</li>
+<li><code>POST /api/v1/inventario/movimientos</code></li>
+<li><code>GET /api/v1/inventario/stock/{productoId}</code></li>
+<li>
+<p><code>GET /api/v1/inventario/movimientos</code></p>
+</li>
+<li>
+<p><strong>¿Se comunica con otro microservicio del equipo? ¿Cómo?</strong><br />
+  Sí. Se comunicará con <code>orden-ms</code> y <code>catalogo-ms</code>. Inicialmente la comunicación será mediante REST/Feign.</p>
+</li>
+<li>
+<p><strong>¿Qué rutas quedan protegidas y con qué rol(es)?</strong></p>
+</li>
+<li>Consultar disponibilidad: <code>CLIENTE</code>, <code>ADMIN</code>, <code>ALMACEN</code></li>
+<li>Registrar movimientos: <code>ALMACEN</code>, <code>ADMIN</code></li>
+<li>
+<p>Consultar movimientos: <code>ALMACEN</code>, <code>ADMIN</code></p>
+</li>
+<li>
+<p><strong>Lista inicial de requisitos:</strong></p>
+</li>
+<li>El sistema debe registrar las entradas y salidas de productos.</li>
+<li>El sistema debe impedir una salida cuando la cantidad solicitada sea superior al stock disponible.</li>
+<li>El sistema debe permitir consultar el stock disponible de cada producto.</li>
+</ul>
+<hr />
+<h3 id="microservicio-cliente-ms-integrante-kengui-p-calsin-mamani-tipo-no-transaccional">Microservicio: <code>cliente-ms</code> (integrante: Kengui P. Calsin Mamani · tipo: no transaccional)</h3>
+<ul>
+<li>
+<p><strong>Descripción breve (2-3 líneas):</strong><br />
+  Gestiona la información de los clientes registrados en MediZano. Mantiene los datos necesarios para identificar al comprador y relacionarlo con sus órdenes.</p>
+</li>
+<li>
+<p><strong>Entidad principal:</strong><br />
+<code>Cliente</code></p>
+</li>
+<li>
+<p><strong>Datos iniciales previstos:</strong></p>
+</li>
+<li>
+<p><code>Cliente</code>: id, nombres, correo.</p>
+</li>
+<li>
+<p><strong>Endpoints iniciales previstos:</strong></p>
+</li>
+<li><code>POST /api/v1/clientes</code></li>
+<li><code>GET /api/v1/clientes/{id}</code></li>
+<li>
+<p><code>PUT /api/v1/clientes/{id}</code></p>
+</li>
+<li>
+<p><strong>¿Se comunica con otro microservicio del equipo? ¿Cómo?</strong><br />
+  Sí. <code>orden-ms</code> utilizará la identificación del cliente para asociar una orden con el comprador. La comunicación será mediante REST/Feign.</p>
+</li>
+<li>
+<p><strong>¿Qué rutas quedan protegidas y con qué rol(es)?</strong></p>
+</li>
+<li>Consultar perfil propio: <code>CLIENTE</code></li>
+<li>Modificar perfil propio: <code>CLIENTE</code></li>
+<li>
+<p>Consultar clientes: <code>ADMIN</code></p>
+</li>
+<li>
+<p><strong>Lista inicial de requisitos:</strong></p>
+</li>
+<li>El sistema debe permitir registrar la información de un cliente.</li>
+<li>El sistema debe permitir al cliente consultar sus datos.</li>
+<li>El sistema debe permitir al cliente actualizar sus datos personales.</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>Qué SÍ cubre este proyecto en conjunto:</strong><br />
+  MediZano cubrirá la consulta de un catálogo de productos, gestión de clientes, generación de órdenes de compra, procesamiento de pagos mediante Mercado Pago, autenticación y autorización mediante JWT y control del inventario asociado a las compras.</p>
+</li>
+<li>
+<p><strong>Qué NO cubre — fuera de alcance, explícito:</strong></p>
+</li>
+<li>Gestión de entregas mediante una flota propia.</li>
+<li>Seguimiento GPS de repartidores.</li>
+<li>Integración con proveedores farmacéuticos externos.</li>
+<li>Venta internacional y conversión de monedas.</li>
+<li>Aplicación móvil nativa.</li>
+</ul>
+<hr />
+<h2 id="4-aprobacion">4. Aprobación</h2>
+<ul>
+<li><strong>Docente:</strong></li>
+<li><strong>Fecha:</strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
