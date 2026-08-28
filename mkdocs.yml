@@ -1,24 +1,39 @@
 site_name: MediZano
-site_description: Proyecto Sello - Brief Técnico
+site_description: Documentación del Proyecto Sello - MediZano
 site_url: https://aldo-ct.github.io/Medizano-Docs/
+
+repo_name: Aldo-Ct/Medizano-Docs
+repo_url: https://github.com/Aldo-Ct/Medizano-Docs
 
 theme:
   name: material
   language: es
+
   features:
     - navigation.sections
+    - navigation.expand
     - navigation.top
+    - navigation.indexes
     - toc.follow
+    - search.suggest
+    - search.highlight
     - content.code.copy
 
 nav:
   - Inicio: index.md
-  - Proyecto Sello:
-      - Brief técnico: brief.md
+
+  - Guía de Proyecto Sello:
+      - Brief técnico: proyecto-sello/brief.md
 
 markdown_extensions:
   - tables
-  - admonition
   - attr_list
+  - admonition
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - search
