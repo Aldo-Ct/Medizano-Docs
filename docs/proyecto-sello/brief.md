@@ -1,270 +1,88 @@
-# Brief Técnico del Proyecto Sello
+# Brief técnico actualizado
 
-Este documento es el punto donde el equipo declara, por escrito, qué sistema distribuido desarrollará durante el ciclo.
+## Identificación
 
-MediZano se adapta al dominio de comercio electrónico, manteniendo el flujo de negocio principal **catálogo → orden → pago** e integrando un servicio externo real.
+- **Proyecto:** MediZano Botica
+- **Dominio:** punto de venta y gestión farmacéutica
+- **Repositorio de aplicación:** [rbn-69-cod/MediZano_microservicios](https://github.com/rbn-69-cod/MediZano_microservicios)
+- **Repositorio de documentación:** [Aldo-Ct/Medizano-Docs](https://github.com/Aldo-Ct/Medizano-Docs)
 
----
-
-## 1. Datos del equipo
-
-- **Nombre del equipo:** MediZano
-- **Sección:** —
-- **Repositorio (URL):** https://github.com/rbn-69-cod/MediZano.git
-- **Topics del repositorio configurados (sí/no):** No — pendiente configurar `grupo-<numero>-medizano`
-
-Integrantes:
-
-| Integrante | Rol o énfasis previsto |
+| Integrante | Énfasis |
 | --- | --- |
-| Aldo Calla Ticona | Backend y frontend |
+| Aldo Calla Ticona | Backend, frontend e infraestructura |
 | Igarlos Ruben Mamani Quispe | Seguridad e integración de pagos |
 | Kengui P. Calsin Mamani | Inventario y gestión de clientes |
 
----
+## Problema que resuelve
 
-## 2. Dominio del proyecto
+MediZano centraliza la operación diaria de una botica. Permite al personal vender medicamentos con trazabilidad de lote, controlar existencias y vencimientos, cobrar mediante distintos medios, emitir comprobantes, procesar devoluciones, consultar reportes y auditar el acceso al sistema.
 
-- **Nombre del proyecto:** MediZano
+El producto actual es un **sistema interno para personal autorizado**, no una tienda pública para que el cliente administre el POS.
 
-- **Problema o necesidad que resuelve (2-4 líneas):**  
-  MediZano busca facilitar la venta en línea de productos farmacéuticos y de botica, permitiendo que los clientes consulten productos disponibles y realicen pedidos desde una plataforma web. Además, busca integrar las ventas con el control de inventario para mantener actualizado el stock de los productos.
+## Flujo extremo a extremo
 
-- **Dominio de negocio:**  
-  Comercio electrónico orientado a productos farmacéuticos y de botica.
+```mermaid
+flowchart LR
+    Catalogo[Catálogo] --> Lote[Lote vigente]
+    Lote --> Orden[Venta u orden]
+    Orden --> Pago[Pago verificado]
+    Pago --> Stock[Movimiento de inventario]
+    Stock --> Factura[Comprobante]
+    Factura --> Reportes[Historial y reportes]
+```
 
-  **Flujo de extremo a extremo:**  
-  catálogo → orden → pago → confirmación → actualización de inventario.
+## Arquitectura implementada
 
-- **Usuarios / actores principales:**
-  - `CLIENTE`
-  - `ADMIN`
-  - `ALMACEN`
+- Frontend SPA con Angular 20 y Nginx.
+- API Gateway con JWT y control de acceso por roles.
+- Eureka para descubrimiento de servicios.
+- Microservicios Spring Boot para usuarios, catálogo, clientes, inventario, órdenes, pagos y facturación.
+- PostgreSQL 16 con una base lógica por dominio.
+- Mercado Pago Checkout Pro con QR/enlace, webhook y conciliación.
+- PayPal Orders API v2 en ambiente Sandbox.
+- Caddy con HTTPS para producción.
+- Prometheus, Loki, Alloy y Grafana como observabilidad opcional.
 
-- **Servicio externo real que integra el proyecto:**  
-  **Mercado Pago**, utilizado como pasarela externa para procesar los pagos de las órdenes realizadas mediante MediZano.
+## Microservicios
 
-- **¿Continúa un proyecto de un ciclo anterior, o es un dominio nuevo?**  
-  Sí. MediZano continúa un proyecto desarrollado anteriormente en el curso de **Lenguaje de Programación II**.
-
----
-
-## 3. Microservicios previstos y alcance esperado
-
-Cada integrante tendrá dos microservicios. De los dos, al menos uno será transaccional.
-
-| Integrante | Microservicio transaccional | Microservicio no transaccional |
+| Servicio | Tipo | Alcance |
 | --- | --- | --- |
-| Aldo Calla Ticona | `orden-ms` | `catalogo-ms` |
-| Igarlos Ruben Mamani Quispe | `pago-ms` | `auth-ms` |
-| Kengui P. Calsin Mamani | `inventario-ms` | `cliente-ms` |
+| `usuario-ms` | Soporte | Autenticación, usuarios y auditoría |
+| `catalogo-ms` | Dominio | Medicamentos, productos y códigos |
+| `cliente-ms` | Dominio | Información de clientes |
+| `inventario-ms` | Transaccional | Lotes, stock y movimientos |
+| `orden-ms` | Transaccional | Órdenes y coordinación postpago |
+| `pago-ms` | Transaccional | Pasarelas, verificación y confirmación |
+| `facturacion-ms` | Transaccional | Ventas, comprobantes, devoluciones y reportes |
 
----
+## Actores y roles
 
-### Microservicio: `orden-ms` (integrante: Aldo Calla Ticona · tipo: transaccional)
+- `ADMIN`: administración completa.
+- `CASHIER`: ventas y cobros.
+- `STOCK_KEEPER`: medicamentos.
+- `STOCK_MONITOR`: inventario.
+- `CUSTOMER_SUPPORT`: devoluciones.
+- `ANALYST` y `MANAGER`: reportes e historial según permisos.
 
-- **Descripción breve (2-3 líneas):**  
-  Gestiona las órdenes de compra realizadas por los clientes. Registra la cabecera de la orden y los productos incluidos en cada pedido, calcula el total y mantiene el estado de la compra.
+## Alcance cubierto
 
-- **Entidad principal o cabecera-detalle:**  
-  `Orden` / `DetalleOrden`
+- Autenticación y autorización por rol.
+- Catálogo farmacéutico y búsqueda por código de barras.
+- Gestión de lotes, precios, stock, vencimientos y movimientos.
+- POS con efectivo, Mercado Pago y PayPal Sandbox.
+- Confirmación automática y segura de pagos electrónicos.
+- Comprobantes PDF, historial, devoluciones y reportes.
+- Despliegue Docker con HTTPS, healthchecks, respaldo y observabilidad.
 
-- **Datos iniciales previstos:**
-  - `Orden`: id, clienteId, total, estado.
-  - `DetalleOrden`: productoId, cantidad, precioUnitario.
+## Fuera de alcance o pendiente
 
-- **Endpoints iniciales previstos:**
-  - `POST /api/v1/ordenes`
-  - `GET /api/v1/ordenes/{id}`
-  - `GET /api/v1/ordenes/cliente/{clienteId}`
+- Aplicación móvil nativa.
+- Logística de entrega y seguimiento GPS.
+- Integración con proveedores farmacéuticos externos.
+- Reembolso monetario automático desde Mercado Pago o PayPal.
+- PayPal productivo: el ambiente predeterminado documentado e implementado es Sandbox.
+- Homologación tributaria externa: los comprobantes internos no sustituyen una integración certificada con SUNAT.
 
-- **¿Se comunica con otro microservicio del equipo? ¿Cómo?**  
-  Sí. Se comunicará de forma síncrona mediante REST/Feign con `catalogo-ms` para consultar la información de los productos y con `pago-ms` para gestionar el proceso de pago.
+## Criterio de aceptación principal
 
-- **¿Qué rutas quedan protegidas y con qué rol(es)?**
-  - Crear una orden: `CLIENTE`
-  - Consultar órdenes propias: `CLIENTE`
-  - Consultar todas las órdenes: `ADMIN`
-
-- **Lista inicial de requisitos:**
-  1. El sistema debe permitir crear una orden con uno o más productos.
-  2. El sistema debe calcular el total de la orden a partir de sus detalles.
-  3. El sistema debe permitir consultar el estado de una orden.
-
----
-
-### Microservicio: `catalogo-ms` (integrante: Aldo Calla Ticona · tipo: no transaccional)
-
-- **Descripción breve (2-3 líneas):**  
-  Gestiona el catálogo de productos disponibles en MediZano. Proporciona la información necesaria para que los clientes puedan consultar los productos ofrecidos en la plataforma.
-
-- **Entidad principal:**  
-  `Producto` / `Categoria`
-
-- **Datos iniciales previstos:**
-  - `Producto`: id, nombre, precio.
-  - `Categoria`: id, nombre, descripcion.
-
-- **Endpoints iniciales previstos:**
-  - `GET /api/v1/productos`
-  - `GET /api/v1/productos/{id}`
-  - `POST /api/v1/productos`
-
-- **¿Se comunica con otro microservicio del equipo? ¿Cómo?**  
-  Sí. `orden-ms` consultará `catalogo-ms` mediante REST/Feign para obtener la información de los productos incluidos en una orden.
-
-- **¿Qué rutas quedan protegidas y con qué rol(es)?**
-  - Consultar catálogo: público.
-  - Consultar producto: público.
-  - Registrar y modificar productos: `ADMIN`.
-
-- **Lista inicial de requisitos:**
-  1. El sistema debe permitir consultar los productos disponibles.
-  2. El sistema debe permitir organizar los productos por categorías.
-  3. El sistema debe permitir al administrador registrar y modificar productos.
-
----
-
-### Microservicio: `pago-ms` (integrante: Igarlos Ruben Mamani Quispe · tipo: transaccional)
-
-- **Descripción breve (2-3 líneas):**  
-  Gestiona los pagos correspondientes a las órdenes de MediZano e integra el sistema con la API externa de Mercado Pago. Registra el resultado de cada operación y permite conocer el estado del pago.
-
-- **Entidad principal o cabecera-detalle:**  
-  `Pago` / `DetallePago`
-
-- **Datos iniciales previstos:**
-  - `Pago`: id, ordenId, monto, estado.
-  - `DetallePago`: id, pagoId, referenciaExterna.
-
-- **Endpoints iniciales previstos:**
-  - `POST /api/v1/pagos`
-  - `GET /api/v1/pagos/{id}`
-  - `GET /api/v1/pagos/orden/{ordenId}`
-
-- **¿Se comunica con otro microservicio del equipo? ¿Cómo?**  
-  Sí. Se comunicará con `orden-ms` mediante REST/Feign y consumirá la API externa real de Mercado Pago.
-
-- **¿Qué rutas quedan protegidas y con qué rol(es)?**
-  - Generar pago: `CLIENTE`
-  - Consultar pago propio: `CLIENTE`
-  - Consultar todos los pagos: `ADMIN`
-
-- **Lista inicial de requisitos:**
-  1. El sistema debe permitir generar un pago asociado a una orden.
-  2. El sistema debe integrar el proceso de pago con Mercado Pago.
-  3. El sistema debe registrar el estado del pago como pendiente, aprobado o rechazado.
-
----
-
-### Microservicio: `auth-ms` (integrante: Igarlos Ruben Mamani Quispe · tipo: no transaccional)
-
-- **Descripción breve (2-3 líneas):**  
-  Gestiona la autenticación y autorización de los usuarios de MediZano. Permite controlar el acceso a las funcionalidades del sistema mediante JWT y roles.
-
-- **Entidad principal:**  
-  `Usuario` / `Rol`
-
-- **Datos iniciales previstos:**
-  - `Usuario`: id, username, password.
-  - `Rol`: id, nombre, descripcion.
-
-- **Endpoints iniciales previstos:**
-  - `POST /api/v1/auth/login`
-  - `POST /api/v1/auth/register`
-
-- **¿Se comunica con otro microservicio del equipo? ¿Cómo?**  
-  Todos los microservicios utilizarán el token JWT para validar la identidad del usuario y sus permisos.
-
-- **¿Qué rutas quedan protegidas y con qué rol(es)?**
-  - Login: público.
-  - Registro de cliente: público.
-  - Funciones administrativas: `ADMIN`.
-  - Todos los servicios validarán JWT en sus rutas protegidas.
-
-- **Lista inicial de requisitos:**
-  1. El sistema debe permitir autenticar usuarios mediante credenciales.
-  2. El sistema debe generar un token JWT después de una autenticación válida.
-  3. El sistema debe restringir funcionalidades según el rol del usuario.
-
----
-
-### Microservicio: `inventario-ms` (integrante: Kengui P. Calsin Mamani · tipo: transaccional)
-
-- **Descripción breve (2-3 líneas):**  
-  Gestiona las existencias de los productos de MediZano mediante movimientos de entrada y salida. Permite mantener actualizado el stock después de las operaciones realizadas en el sistema.
-
-- **Entidad principal o cabecera-detalle:**  
-  `MovimientoInventario` / `DetalleMovimiento`
-
-- **Datos iniciales previstos:**
-  - `MovimientoInventario`: id, fecha, tipoMovimiento.
-  - `DetalleMovimiento`: productoId, cantidad, lote.
-
-- **Endpoints iniciales previstos:**
-  - `POST /api/v1/inventario/movimientos`
-  - `GET /api/v1/inventario/stock/{productoId}`
-  - `GET /api/v1/inventario/movimientos`
-
-- **¿Se comunica con otro microservicio del equipo? ¿Cómo?**  
-  Sí. Se comunicará con `orden-ms` y `catalogo-ms`. Inicialmente la comunicación será mediante REST/Feign.
-
-- **¿Qué rutas quedan protegidas y con qué rol(es)?**
-  - Consultar disponibilidad: `CLIENTE`, `ADMIN`, `ALMACEN`
-  - Registrar movimientos: `ALMACEN`, `ADMIN`
-  - Consultar movimientos: `ALMACEN`, `ADMIN`
-
-- **Lista inicial de requisitos:**
-  1. El sistema debe registrar las entradas y salidas de productos.
-  2. El sistema debe impedir una salida cuando la cantidad solicitada sea superior al stock disponible.
-  3. El sistema debe permitir consultar el stock disponible de cada producto.
-
----
-
-### Microservicio: `cliente-ms` (integrante: Kengui P. Calsin Mamani · tipo: no transaccional)
-
-- **Descripción breve (2-3 líneas):**  
-  Gestiona la información de los clientes registrados en MediZano. Mantiene los datos necesarios para identificar al comprador y relacionarlo con sus órdenes.
-
-- **Entidad principal:**  
-  `Cliente`
-
-- **Datos iniciales previstos:**
-  - `Cliente`: id, nombres, correo.
-
-- **Endpoints iniciales previstos:**
-  - `POST /api/v1/clientes`
-  - `GET /api/v1/clientes/{id}`
-  - `PUT /api/v1/clientes/{id}`
-
-- **¿Se comunica con otro microservicio del equipo? ¿Cómo?**  
-  Sí. `orden-ms` utilizará la identificación del cliente para asociar una orden con el comprador. La comunicación será mediante REST/Feign.
-
-- **¿Qué rutas quedan protegidas y con qué rol(es)?**
-  - Consultar perfil propio: `CLIENTE`
-  - Modificar perfil propio: `CLIENTE`
-  - Consultar clientes: `ADMIN`
-
-- **Lista inicial de requisitos:**
-  1. El sistema debe permitir registrar la información de un cliente.
-  2. El sistema debe permitir al cliente consultar sus datos.
-  3. El sistema debe permitir al cliente actualizar sus datos personales.
-
----
-
-- **Qué SÍ cubre este proyecto en conjunto:**  
-  MediZano cubrirá la consulta de un catálogo de productos, gestión de clientes, generación de órdenes de compra, procesamiento de pagos mediante Mercado Pago, autenticación y autorización mediante JWT y control del inventario asociado a las compras.
-
-- **Qué NO cubre — fuera de alcance, explícito:**
-  - Gestión de entregas mediante una flota propia.
-  - Seguimiento GPS de repartidores.
-  - Integración con proveedores farmacéuticos externos.
-  - Venta internacional y conversión de monedas.
-  - Aplicación móvil nativa.
-
----
-
-## 4. Aprobación
-
-- **Docente:**
-- **Fecha:**
+Una venta electrónica se considera terminada solamente cuando la pasarela confirma el pago, el backend valida orden/monto/moneda, `orden-ms` queda en estado pagado, inventario registra una única salida y facturación genera un único comprobante.

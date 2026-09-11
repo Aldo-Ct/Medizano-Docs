@@ -1,14 +1,27 @@
 site_name: MediZano
-site_description: Documentación del Proyecto Sello - MediZano
+site_description: Documentación técnica y operativa de MediZano Botica
 site_url: https://aldo-ct.github.io/Medizano-Docs/
 
-repo_name: Aldo-Ct/Medizano-Docs
-repo_url: https://github.com/Aldo-Ct/Medizano-Docs
+repo_name: rbn-69-cod/MediZano_microservicios
+repo_url: https://github.com/rbn-69-cod/MediZano_microservicios
+edit_uri: ""
 
 theme:
   name: material
   language: es
-
+  palette:
+    - scheme: default
+      primary: light blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: light blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
   features:
     - navigation.sections
     - navigation.expand
@@ -21,9 +34,16 @@ theme:
 
 nav:
   - Inicio: index.md
-
-  - Guía de Proyecto Sello:
-      - Brief técnico: proyecto-sello/brief.md
+  - Arquitectura:
+      - Cómo funciona la aplicación: arquitectura/index.md
+      - Microservicios y módulos: arquitectura/modulos.md
+  - Flujos de negocio:
+      - Ventas y pagos: flujos/ventas-pagos.md
+  - Operación:
+      - Despliegue y configuración: operacion/despliegue.md
+      - Verificación y soporte: operacion/verificacion.md
+  - Proyecto Sello:
+      - Brief técnico actualizado: proyecto-sello/brief.md
 
 markdown_extensions:
   - tables
@@ -31,9 +51,13 @@ markdown_extensions:
   - admonition
   - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   - search

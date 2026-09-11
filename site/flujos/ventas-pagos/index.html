@@ -10,26 +10,28 @@
 
 
 
-        <link rel="canonical" href="https://aldo-ct.github.io/Medizano-Docs/">
+        <link rel="canonical" href="https://aldo-ct.github.io/Medizano-Docs/flujos/ventas-pagos/">
 
 
+        <link rel="prev" href="../../arquitectura/modulos/">
 
-        <link rel="next" href="arquitectura/">
+
+        <link rel="next" href="../../operacion/despliegue/">
 
 
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
 
 
 
-        <title>MediZano</title>
+        <title>Ventas y pagos - MediZano</title>
 
 
 
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
 
 
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
 
 
 
@@ -48,7 +50,7 @@
 
 
 
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 
 
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
 
 
-        <a href="#medizano-botica" class="md-skip">
+        <a href="#ventas-y-pagos" class="md-skip">
           Saltar a contenido
         </a>
 
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="MediZano" class="md-header__button md-logo" aria-label="MediZano" data-md-component="logo">
+    <a href="../.." title="MediZano" class="md-header__button md-logo" aria-label="MediZano" data-md-component="logo">
 
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
 
-              Inicio
+              Ventas y pagos
 
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="MediZano" class="md-nav__button md-logo" aria-label="MediZano" data-md-component="logo">
+    <a href="../.." title="MediZano" class="md-nav__button md-logo" aria-label="MediZano" data-md-component="logo">
 
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -257,30 +259,8 @@
 
 
 
-
-
-    <li class="md-nav__item md-nav__item--active">
-
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-
-
-
-
-
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-
-
-
-  <span class="md-ellipsis">
-    Inicio
-
-  </span>
-
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
 
 
 
@@ -291,62 +271,6 @@
 
 
       </a>
-
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-
-
-
-
-
-
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-
-        <li class="md-nav__item">
-  <a href="#que-puede-hacer-el-personal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Qué puede hacer el personal
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#recorrido-principal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recorrido principal
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#documentos-principales" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentos principales
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#estado-de-las-pasarelas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estado de las pasarelas
-    </span>
-  </a>
-
-</li>
-
-    </ul>
-
-</nav>
-
     </li>
 
 
@@ -385,7 +309,7 @@
 
 
           <div class="md-nav__link md-nav__container">
-            <a href="arquitectura/" class="md-nav__link ">
+            <a href="../../arquitectura/" class="md-nav__link ">
 
 
 
@@ -420,7 +344,7 @@
 
 
     <li class="md-nav__item">
-      <a href="arquitectura/modulos/" class="md-nav__link">
+      <a href="../../arquitectura/modulos/" class="md-nav__link">
 
 
 
@@ -463,13 +387,13 @@
 
 
 
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+
+
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 
 
 
-
-
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
 
 
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -485,7 +409,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
 
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Flujos de negocio
@@ -498,8 +422,30 @@
 
 
 
-    <li class="md-nav__item">
-      <a href="flujos/ventas-pagos/" class="md-nav__link">
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+    Ventas y pagos
+
+  </span>
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
 
 
 
@@ -510,6 +456,80 @@
 
 
       </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#flujo-completo-de-pago-electronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo completo de pago electrónico
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#efectivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectivo
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#mercado-pago-checkout-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mercado Pago Checkout Pro
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#paypal" class="md-nav__link">
+    <span class="md-ellipsis">
+      PayPal
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#recuperacion-e-idempotencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recuperación e idempotencia
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#devoluciones-limite-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devoluciones: límite actual
+    </span>
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+
     </li>
 
 
@@ -580,7 +600,7 @@
 
 
     <li class="md-nav__item">
-      <a href="operacion/despliegue/" class="md-nav__link">
+      <a href="../../operacion/despliegue/" class="md-nav__link">
 
 
 
@@ -603,7 +623,7 @@
 
 
     <li class="md-nav__item">
-      <a href="operacion/verificacion/" class="md-nav__link">
+      <a href="../../operacion/verificacion/" class="md-nav__link">
 
 
 
@@ -682,7 +702,7 @@
 
 
     <li class="md-nav__item">
-      <a href="proyecto-sello/brief/" class="md-nav__link">
+      <a href="../../proyecto-sello/brief/" class="md-nav__link">
 
 
 
@@ -732,36 +752,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 
         <li class="md-nav__item">
-  <a href="#que-puede-hacer-el-personal" class="md-nav__link">
+  <a href="#flujo-completo-de-pago-electronico" class="md-nav__link">
     <span class="md-ellipsis">
-      Qué puede hacer el personal
+      Flujo completo de pago electrónico
     </span>
   </a>
 
 </li>
 
         <li class="md-nav__item">
-  <a href="#recorrido-principal" class="md-nav__link">
+  <a href="#efectivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Recorrido principal
+      Efectivo
     </span>
   </a>
 
 </li>
 
         <li class="md-nav__item">
-  <a href="#documentos-principales" class="md-nav__link">
+  <a href="#mercado-pago-checkout-pro" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentos principales
+      Mercado Pago Checkout Pro
     </span>
   </a>
 
 </li>
 
         <li class="md-nav__item">
-  <a href="#estado-de-las-pasarelas" class="md-nav__link">
+  <a href="#paypal" class="md-nav__link">
     <span class="md-ellipsis">
-      Estado de las pasarelas
+      PayPal
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#recuperacion-e-idempotencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recuperación e idempotencia
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#devoluciones-limite-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devoluciones: límite actual
     </span>
   </a>
 
@@ -783,83 +821,97 @@
 
 
 
-<h1 id="medizano-botica">MediZano Botica</h1>
-<p>MediZano es una aplicación web interna para administrar una botica: ventas en caja, catálogo de medicamentos, lotes y existencias, clientes, comprobantes, devoluciones, reportes, usuarios y auditoría.</p>
-<p>La solución usa una arquitectura de microservicios con <strong>Angular 20</strong>, <strong>Spring Boot 3.2</strong>, <strong>Spring Cloud</strong>, <strong>PostgreSQL 16</strong> y <strong>Docker Compose</strong>. En producción, <strong>Caddy</strong> publica el sistema por HTTPS y el resto de los componentes permanece dentro de la red privada de Docker.</p>
-<div class="admonition info">
-<p class="admonition-title">Estado de esta documentación</p>
-<p>Actualizada el <strong>11 de septiembre de 2026</strong> a partir del repositorio real <a href="https://github.com/rbn-69-cod/MediZano_microservicios">MediZano_microservicios</a>, incluido el flujo de pagos incorporado en el commit <code>6dc1457</code>.</p>
-</div>
-<h2 id="que-puede-hacer-el-personal">Qué puede hacer el personal</h2>
+<h1 id="ventas-y-pagos">Ventas y pagos</h1>
+<p>MediZano separa los cobros presenciales en efectivo de los pagos electrónicos. Esta distinción evita descontar stock o emitir un comprobante antes de que una pasarela confirme realmente el dinero.</p>
+<h2 id="flujo-completo-de-pago-electronico">Flujo completo de pago electrónico</h2>
+<pre class="mermaid"><code>sequenceDiagram
+    actor Cajero
+    actor Cliente
+    participant UI as Angular POS
+    participant O as orden-ms
+    participant P as pago-ms
+    participant X as Mercado Pago / PayPal
+    participant I as inventario-ms
+    participant F as facturacion-ms
+
+    Cajero-&gt;&gt;UI: Selecciona productos, lotes y pasarela
+    UI-&gt;&gt;O: Crea orden PENDING
+    O--&gt;&gt;UI: ordenId y total calculado
+    UI-&gt;&gt;P: Solicita preferencia/orden externa
+    P-&gt;&gt;O: Consulta y valida la orden
+    P-&gt;&gt;X: Crea operación con idempotencia
+    X--&gt;&gt;P: URL de aprobación
+    P--&gt;&gt;UI: Enlace para el cliente
+    UI--&gt;&gt;Cliente: Muestra QR o ventana segura
+    Cliente-&gt;&gt;X: Autoriza el pago
+    loop Hasta conocer el resultado
+        UI-&gt;&gt;P: Reconciliar estado
+        P-&gt;&gt;X: Consultar estado oficial
+    end
+    X--&gt;&gt;P: Pago aprobado
+    P-&gt;&gt;P: Valida orden, monto y moneda
+    P-&gt;&gt;O: Confirmar pago con token interno
+    O-&gt;&gt;I: Descontar stock una sola vez
+    O-&gt;&gt;F: Generar comprobante una sola vez
+    O--&gt;&gt;P: Orden PAGADA
+    P--&gt;&gt;UI: Pago aprobado y confirmado
+    UI--&gt;&gt;Cajero: Éxito y opción de PDF</code></pre>
+<h2 id="efectivo">Efectivo</h2>
+<ol>
+<li>El cajero añade productos y selecciona un lote vigente.</li>
+<li><code>facturacion-ms</code> vuelve a consultar catálogo e inventario; no confía en el precio recibido desde Angular.</li>
+<li>Valida el importe entregado, calcula el vuelto y registra el monto neto aplicado.</li>
+<li>Descuenta stock mediante una operación idempotente.</li>
+<li>Marca el comprobante como pagado y permite descargar el PDF.</li>
+</ol>
+<p>Los pagos electrónicos no pueden entrar por el endpoint directo de facturación; deben pasar por <code>orden-ms</code> y <code>pago-ms</code>.</p>
+<h2 id="mercado-pago-checkout-pro">Mercado Pago Checkout Pro</h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Crear orden MERCADO_PAGO] --&gt; B[pago-ms crea preferencia]
+    B --&gt; C[Angular genera QR con init_point]
+    C --&gt; D[Cliente abre Checkout Pro]
+    D --&gt; E{Estado oficial}
+    E --&gt;|approved| F[Validar referencia, monto y PEN]
+    E --&gt;|pending| G[Continuar conciliación]
+    E --&gt;|rejected/cancelled| H[No descontar stock]
+    G --&gt; E
+    F --&gt; I[Confirmar orden]
+    I --&gt; J[Stock + comprobante]</code></pre>
+<p>Características implementadas:</p>
 <ul>
-<li>Iniciar sesión y acceder a funciones según su rol.</li>
-<li>Buscar medicamentos por nombre o código de barras.</li>
-<li>Seleccionar un lote vigente y validar su stock y precio oficial.</li>
-<li>Cobrar en efectivo, Mercado Pago o PayPal Sandbox.</li>
-<li>Mostrar al cliente un QR o compartir un enlace de Mercado Pago.</li>
-<li>Confirmar electrónicamente una venta sin confiar en datos del navegador.</li>
-<li>Descontar inventario y generar el comprobante después del pago.</li>
-<li>Consultar ventas, descargar comprobantes PDF, gestionar devoluciones y revisar reportes.</li>
-<li>Administrar usuarios y consultar historiales de acceso y actividad.</li>
+<li>Preferencia con <code>external_reference</code> igual al identificador de la orden.</li>
+<li>QR generado en el navegador a partir del enlace oficial de Checkout Pro.</li>
+<li>Botón para copiar el enlace y enviarlo al cliente.</li>
+<li><code>back_urls</code> para éxito, pendiente y fallo; <code>auto_return</code> para pagos aprobados.</li>
+<li>Webhook público con validación HMAC mediante <code>x-signature</code> y <code>x-request-id</code>.</li>
+<li>Conciliación automática por <code>preferenceId</code> si el retorno del navegador no trae toda la información.</li>
+<li>Verificación de <code>payment_id</code> directamente contra la API de Mercado Pago.</li>
+<li>Idempotencia para no duplicar preferencias, pagos ni efectos posteriores.</li>
 </ul>
-<h2 id="recorrido-principal">Recorrido principal</h2>
-<pre class="mermaid"><code>flowchart LR
-    A[Personal inicia sesión] --&gt; B[Busca medicamento]
-    B --&gt; C[Selecciona lote y cantidad]
-    C --&gt; D{Método de pago}
-    D --&gt;|Efectivo| E[Registra venta]
-    D --&gt;|Mercado Pago| F[Genera QR y enlace]
-    D --&gt;|PayPal Sandbox| G[Abre aprobación PayPal]
-    F --&gt; H[Proveedor confirma el pago]
-    G --&gt; H
-    E --&gt; I[Descuenta stock]
-    H --&gt; I
-    I --&gt; J[Genera comprobante]
-    J --&gt; K[Historial, PDF y reportes]</code></pre>
-<h2 id="documentos-principales">Documentos principales</h2>
-<ul>
-<li><a href="arquitectura/">Cómo funciona la aplicación</a>: arquitectura completa y comunicaciones.</li>
-<li><a href="arquitectura/modulos/">Microservicios y módulos</a>: responsabilidades, puertos y pantallas.</li>
-<li><a href="flujos/ventas-pagos/">Ventas y pagos</a>: efectivo, Mercado Pago, PayPal y confirmación automática.</li>
-<li><a href="operacion/despliegue/">Despliegue y configuración</a>: ejecución local y publicación segura.</li>
-<li><a href="operacion/verificacion/">Verificación y soporte</a>: pruebas, salud, observabilidad y diagnóstico.</li>
-<li><a href="proyecto-sello/brief/">Brief técnico actualizado</a>: alcance académico y situación actual.</li>
-</ul>
-<h2 id="estado-de-las-pasarelas">Estado de las pasarelas</h2>
-<table>
-<thead>
-<tr>
-<th>Medio</th>
-<th>Estado actual</th>
-<th>Moneda</th>
-<th>Confirmación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Efectivo</td>
-<td>Implementado</td>
-<td>PEN</td>
-<td>Inmediata en backend</td>
-</tr>
-<tr>
-<td>Mercado Pago Checkout Pro</td>
-<td>Implementado; depende de las credenciales configuradas</td>
-<td>PEN</td>
-<td>Webhook firmado y reconciliación automática</td>
-</tr>
-<tr>
-<td>PayPal Orders API v2</td>
-<td>Implementado en Sandbox</td>
-<td>USD</td>
-<td>Consulta, captura y reconciliación automática</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Antes de cobrar dinero real</p>
-<p>PayPal usa Sandbox por defecto. Mercado Pago debe probarse con cuentas y credenciales coherentes con el ambiente elegido. Además, el flujo actual de devoluciones no ejecuta todavía el reembolso monetario automático en Mercado Pago o PayPal.</p>
+<div class="admonition note">
+<p class="admonition-title">Pruebas</p>
+<p>Las credenciales de la aplicación y la cuenta compradora deben pertenecer al mismo ambiente y país. Un pago de prueba no aparece como dinero real en la cuenta productiva.</p>
 </div>
+<h2 id="paypal">PayPal</h2>
+<p>PayPal permanece disponible y usa <strong>Orders API v2 en Sandbox</strong> por defecto:</p>
+<ol>
+<li><code>pago-ms</code> convierte el total en PEN a USD con <code>PAYPAL_EXCHANGE_RATE</code>.</li>
+<li>Crea una orden <code>CAPTURE</code> y devuelve la URL de aprobación.</li>
+<li>Angular abre esa URL en una ventana separada y consulta periódicamente el estado.</li>
+<li>Cuando PayPal informa <code>APPROVED</code>, el backend realiza la captura automáticamente.</li>
+<li>Solo acepta <code>COMPLETED</code> si coinciden la orden interna, el monto y la moneda.</li>
+<li>Confirma la orden y activa el mismo postpago de inventario y facturación.</li>
+</ol>
+<p>No existe un botón manual que pueda declarar el pago exitoso sin consultar a PayPal.</p>
+<h2 id="recuperacion-e-idempotencia">Recuperación e idempotencia</h2>
+<ul>
+<li><code>pago-ms</code> reintenta cada 30 segundos las confirmaciones aprobadas que aún no llegaron a <code>orden-ms</code>.</li>
+<li><code>orden-ms</code> reintenta las órdenes pagadas cuyo descuento de stock o comprobante quedó pendiente.</li>
+<li>Inventario identifica cada operación de venta/devolución para impedir dobles movimientos.</li>
+<li>Las llamadas repetidas de verificación devuelven el resultado existente cuando ya fue aprobado.</li>
+</ul>
+<h2 id="devoluciones-limite-actual">Devoluciones: límite actual</h2>
+<p>El módulo de devoluciones valida cantidades acumuladas, registra el importe a devolver y repone el lote correspondiente. Sin embargo, <strong>no llama todavía a las API de refund de Mercado Pago o PayPal</strong>. Para pagos electrónicos, el reembolso monetario debe gestionarse manualmente en la pasarela hasta implementar y probar ese flujo.</p>
 
 
 
@@ -914,10 +966,10 @@
 
 
 
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
 
 
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
 
 
   </body>
