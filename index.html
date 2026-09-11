@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentación del Proyecto Sello - MediZano">
+        <meta name="description" content="Documentación técnica y operativa de MediZano Botica">
       
       
       
@@ -14,14 +14,11 @@
       
       
       
-        <link rel="next" href="proyecto-sello/brief/">
-      
-      
-        
+        <link rel="next" href="arquitectura/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -29,7 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,10 +54,18 @@
 
     
     
+    
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#medizano" class="md-skip">
+        <a href="#medizano-botica" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -108,6 +116,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -158,13 +192,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/Aldo-Ct/Medizano-Docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/rbn-69-cod/MediZano_microservicios" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    Aldo-Ct/Medizano-Docs
+    rbn-69-cod/MediZano_microservicios
   </div>
 </a>
       </div>
@@ -204,13 +238,13 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Aldo-Ct/Medizano-Docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/rbn-69-cod/MediZano_microservicios" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    Aldo-Ct/Medizano-Docs
+    rbn-69-cod/MediZano_microservicios
   </div>
 </a>
     </div>
@@ -238,14 +272,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Inicio
-  
-
     
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -256,14 +285,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Inicio
-  
-
     
   </span>
-  
   
 
       </a>
@@ -284,11 +308,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proyecto-sello" class="md-nav__link">
+  <a href="#que-puede-hacer-el-personal" class="md-nav__link">
     <span class="md-ellipsis">
+      Qué puede hacer el personal
+    </span>
+  </a>
+  
+</li>
       
-        Proyecto Sello
+        <li class="md-nav__item">
+  <a href="#recorrido-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorrido principal
+    </span>
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#documentos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentos principales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-de-las-pasarelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado de las pasarelas
     </span>
   </a>
   
@@ -297,6 +346,98 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="arquitectura/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Arquitectura
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitectura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="arquitectura/modulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Microservicios y módulos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -328,35 +469,209 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
-    
-  
-    Guía de Proyecto Sello
-  
-
+    Flujos de negocio
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
+            Flujos de negocio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
+              
+                
   
-    Guía de Proyecto Sello
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flujos/ventas-pagos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ventas y pagos
+    
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="operacion/despliegue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Despliegue y configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="operacion/verificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verificación y soporte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Proyecto Sello
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Sello
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -372,14 +687,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Brief técnico
-  
-
+    Brief técnico actualizado
     
   </span>
-  
   
 
       </a>
@@ -422,11 +732,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proyecto-sello" class="md-nav__link">
+  <a href="#que-puede-hacer-el-personal" class="md-nav__link">
     <span class="md-ellipsis">
+      Qué puede hacer el personal
+    </span>
+  </a>
+  
+</li>
       
-        Proyecto Sello
+        <li class="md-nav__item">
+  <a href="#recorrido-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorrido principal
+    </span>
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#documentos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentos principales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-de-las-pasarelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado de las pasarelas
     </span>
   </a>
   
@@ -442,24 +777,89 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
-  
-  
 
-
-<h1 id="medizano">MediZano</h1>
-<p>Bienvenido a la documentación del proyecto <strong>MediZano</strong>.</p>
-<p>MediZano es una plataforma de comercio electrónico orientada a productos farmacéuticos y de botica.</p>
-<p>El sistema permitirá gestionar un flujo completo de comercio electrónico:</p>
-<p><strong>Catálogo → Orden → Pago → Confirmación → Inventario</strong></p>
-<h2 id="proyecto-sello">Proyecto Sello</h2>
-<p>La documentación técnica del Proyecto Sello se encuentra en:</p>
-<p><a href="proyecto-sello/brief/">Brief Técnico</a></p>
+<h1 id="medizano-botica">MediZano Botica</h1>
+<p>MediZano es una aplicación web interna para administrar una botica: ventas en caja, catálogo de medicamentos, lotes y existencias, clientes, comprobantes, devoluciones, reportes, usuarios y auditoría.</p>
+<p>La solución usa una arquitectura de microservicios con <strong>Angular 20</strong>, <strong>Spring Boot 3.2</strong>, <strong>Spring Cloud</strong>, <strong>PostgreSQL 16</strong> y <strong>Docker Compose</strong>. En producción, <strong>Caddy</strong> publica el sistema por HTTPS y el resto de los componentes permanece dentro de la red privada de Docker.</p>
+<div class="admonition info">
+<p class="admonition-title">Estado de esta documentación</p>
+<p>Actualizada el <strong>11 de septiembre de 2026</strong> a partir del repositorio real <a href="https://github.com/rbn-69-cod/MediZano_microservicios">MediZano_microservicios</a>, incluido el flujo de pagos incorporado en el commit <code>6dc1457</code>.</p>
+</div>
+<h2 id="que-puede-hacer-el-personal">Qué puede hacer el personal</h2>
+<ul>
+<li>Iniciar sesión y acceder a funciones según su rol.</li>
+<li>Buscar medicamentos por nombre o código de barras.</li>
+<li>Seleccionar un lote vigente y validar su stock y precio oficial.</li>
+<li>Cobrar en efectivo, Mercado Pago o PayPal Sandbox.</li>
+<li>Mostrar al cliente un QR o compartir un enlace de Mercado Pago.</li>
+<li>Confirmar electrónicamente una venta sin confiar en datos del navegador.</li>
+<li>Descontar inventario y generar el comprobante después del pago.</li>
+<li>Consultar ventas, descargar comprobantes PDF, gestionar devoluciones y revisar reportes.</li>
+<li>Administrar usuarios y consultar historiales de acceso y actividad.</li>
+</ul>
+<h2 id="recorrido-principal">Recorrido principal</h2>
+<pre class="mermaid"><code>flowchart LR
+    A[Personal inicia sesión] --&gt; B[Busca medicamento]
+    B --&gt; C[Selecciona lote y cantidad]
+    C --&gt; D{Método de pago}
+    D --&gt;|Efectivo| E[Registra venta]
+    D --&gt;|Mercado Pago| F[Genera QR y enlace]
+    D --&gt;|PayPal Sandbox| G[Abre aprobación PayPal]
+    F --&gt; H[Proveedor confirma el pago]
+    G --&gt; H
+    E --&gt; I[Descuenta stock]
+    H --&gt; I
+    I --&gt; J[Genera comprobante]
+    J --&gt; K[Historial, PDF y reportes]</code></pre>
+<h2 id="documentos-principales">Documentos principales</h2>
+<ul>
+<li><a href="arquitectura/">Cómo funciona la aplicación</a>: arquitectura completa y comunicaciones.</li>
+<li><a href="arquitectura/modulos/">Microservicios y módulos</a>: responsabilidades, puertos y pantallas.</li>
+<li><a href="flujos/ventas-pagos/">Ventas y pagos</a>: efectivo, Mercado Pago, PayPal y confirmación automática.</li>
+<li><a href="operacion/despliegue/">Despliegue y configuración</a>: ejecución local y publicación segura.</li>
+<li><a href="operacion/verificacion/">Verificación y soporte</a>: pruebas, salud, observabilidad y diagnóstico.</li>
+<li><a href="proyecto-sello/brief/">Brief técnico actualizado</a>: alcance académico y situación actual.</li>
+</ul>
+<h2 id="estado-de-las-pasarelas">Estado de las pasarelas</h2>
+<table>
+<thead>
+<tr>
+<th>Medio</th>
+<th>Estado actual</th>
+<th>Moneda</th>
+<th>Confirmación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Efectivo</td>
+<td>Implementado</td>
+<td>PEN</td>
+<td>Inmediata en backend</td>
+</tr>
+<tr>
+<td>Mercado Pago Checkout Pro</td>
+<td>Implementado; depende de las credenciales configuradas</td>
+<td>PEN</td>
+<td>Webhook firmado y reconciliación automática</td>
+</tr>
+<tr>
+<td>PayPal Orders API v2</td>
+<td>Implementado en Sandbox</td>
+<td>USD</td>
+<td>Consulta, captura y reconciliación automática</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Antes de cobrar dinero real</p>
+<p>PayPal usa Sandbox por defecto. Mercado Pago debe probarse con cuentas y credenciales coherentes con el ambiente elegido. Además, el flujo actual de devoluciones no ejecuta todavía el reembolso monetario automático en Mercado Pago o PayPal.</p>
+</div>
 
 
 
@@ -514,11 +914,10 @@
     
     
       
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

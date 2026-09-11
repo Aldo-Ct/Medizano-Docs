@@ -2,10 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://aldo-ct.github.io/Medizano-Docs/</loc>
-         <lastmod>2026-08-28</lastmod>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://aldo-ct.github.io/Medizano-Docs/arquitectura/</loc>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://aldo-ct.github.io/Medizano-Docs/arquitectura/modulos/</loc>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://aldo-ct.github.io/Medizano-Docs/flujos/ventas-pagos/</loc>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://aldo-ct.github.io/Medizano-Docs/operacion/despliegue/</loc>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://aldo-ct.github.io/Medizano-Docs/operacion/verificacion/</loc>
+         <lastmod>2026-09-11</lastmod>
     </url>
     <url>
          <loc>https://aldo-ct.github.io/Medizano-Docs/proyecto-sello/brief/</loc>
-         <lastmod>2026-08-28</lastmod>
+         <lastmod>2026-09-11</lastmod>
     </url>
 </urlset>
