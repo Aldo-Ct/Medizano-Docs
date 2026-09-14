@@ -1,0 +1,1220 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="Documentación técnica y operativa de MediZano Botica">
+
+
+
+        <link rel="canonical" href="https://aldo-ct.github.io/Medizano-Docs/operacion/levantamiento/">
+
+
+        <link rel="prev" href="../../flujos/ventas-pagos/">
+
+
+        <link rel="next" href="../despliegue/">
+
+
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+
+
+
+        <title>Guía de levantamiento - MediZano</title>
+
+
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+
+
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+
+
+
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+
+
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue">
+
+
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+
+        <a href="#guia-de-levantamiento" class="md-skip">
+          Saltar a contenido
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+
+
+
+
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="MediZano" class="md-header__button md-logo" aria-label="MediZano" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MediZano
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+
+              Guía de levantamiento
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+        <form class="md-header__option" data-md-component="palette">
+
+
+
+
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+
+
+
+
+
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+
+
+</form>
+
+
+
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
+
+
+
+        <label class="md-header__button md-icon" for="__search">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="md-header__source">
+        <a href="https://github.com/rbn-69-cod/MediZano_microservicios" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rbn-69-cod/MediZano_microservicios
+  </div>
+</a>
+      </div>
+
+  </nav>
+
+</header>
+
+    <div class="md-container" data-md-component="container">
+
+
+
+
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+
+
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MediZano" class="md-nav__button md-logo" aria-label="MediZano" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MediZano
+  </label>
+
+    <div class="md-nav__source">
+      <a href="https://github.com/rbn-69-cod/MediZano_microservicios" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rbn-69-cod/MediZano_microservicios
+  </div>
+</a>
+    </div>
+
+  <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Inicio
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+
+
+
+
+
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+
+
+          <div class="md-nav__link md-nav__container">
+            <a href="../../arquitectura/" class="md-nav__link ">
+
+
+
+  <span class="md-ellipsis">
+    Arquitectura
+
+  </span>
+
+
+            </a>
+
+
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+
+          </div>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitectura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../arquitectura/modulos/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Microservicios y módulos
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+
+
+
+
+
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+    Flujos de negocio
+
+  </span>
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flujos de negocio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../flujos/ventas-pagos/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Ventas y pagos
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+
+
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+    Operación
+
+  </span>
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+    Guía de levantamiento
+
+  </span>
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
+
+
+
+  <span class="md-ellipsis">
+    Guía de levantamiento
+
+  </span>
+
+
+      </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#1-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Requisitos
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#2-validar-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Validar la configuración
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#3-primer-levantamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Primer levantamiento
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#4-comprobar-los-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Comprobar los contenedores
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#5-verificacion-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificación funcional
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#6-verificar-los-targets-de-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificar los targets de Prometheus
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#7-accesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Accesos
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="7. Accesos">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#desde-el-mismo-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desde el mismo equipo
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#publicados-en-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publicados en Internet
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#8-logs-y-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Logs y diagnóstico
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#9-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Producción
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#10-detener-el-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Detener el entorno
+    </span>
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../despliegue/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Despliegue y configuración
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../verificacion/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Verificación y soporte
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+
+
+
+
+
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+
+
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+    Proyecto Sello
+
+  </span>
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Sello
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../proyecto-sello/brief/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Brief técnico actualizado
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#1-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Requisitos
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#2-validar-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Validar la configuración
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#3-primer-levantamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Primer levantamiento
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#4-comprobar-los-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Comprobar los contenedores
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#5-verificacion-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificación funcional
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#6-verificar-los-targets-de-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificar los targets de Prometheus
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#7-accesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Accesos
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="7. Accesos">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#desde-el-mismo-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desde el mismo equipo
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#publicados-en-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publicados en Internet
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#8-logs-y-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Logs y diagnóstico
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#9-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Producción
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#10-detener-el-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Detener el entorno
+    </span>
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+
+
+
+
+
+<h1 id="guia-de-levantamiento">Guía de levantamiento</h1>
+<p>Esta guía permite iniciar MediZano desde terminal, comprobar todos los componentes y recuperar el entorno cuando un servicio no responde. Los comandos se ejecutan desde la raíz de <code>MediZano_microservicios</code>.</p>
+<h2 id="1-requisitos">1. Requisitos</h2>
+<ul>
+<li>Docker Engine o Docker Desktop con Docker Compose v2.</li>
+<li>Archivo <code>.env</code> creado a partir de <code>.env.example</code>.</li>
+<li>Contraseñas y tokens reales almacenados solo en <code>.env</code>.</li>
+<li>Puertos <code>4200</code>, <code>8090</code>, <code>8761</code>, <code>3000</code> y <code>9090</code> libres para el entorno local.</li>
+</ul>
+<p>En macOS puede iniciar Docker Desktop desde terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>open<span class="w"> </span>-a<span class="w"> </span>Docker
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>info
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
+</code></pre></div>
+<p><code>docker info</code> debe terminar correctamente antes de continuar.</p>
+<h2 id="2-validar-la-configuracion">2. Validar la configuración</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">test</span><span class="w"> </span>-f<span class="w"> </span>.env<span class="w"> </span><span class="o">||</span><span class="w"> </span>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>config<span class="w"> </span>--quiet
+</code></pre></div>
+<p>Si se acaba de crear <code>.env</code>, edítelo y sustituya todos los valores de ejemplo. No copie su contenido en capturas, tickets o repositorios.</p>
+<h2 id="3-primer-levantamiento">3. Primer levantamiento</h2>
+<p>El primer inicio construye las imágenes y habilita Grafana, Prometheus, Loki y Alloy:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</code></pre></div>
+<p>Para inicios posteriores, cuando no cambió el código, basta con:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h2 id="4-comprobar-los-contenedores">4. Comprobar los contenedores</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>ps
+</code></pre></div>
+<p>Los componentes con healthcheck deben aparecer como <code>healthy</code>. El arranque de Spring Boot puede tardar entre 30 y 90 segundos dependiendo del equipo.</p>
+<p>Para observar la transición en tiempo real:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="s1">'docker compose --profile observability ps'</span>
+</code></pre></div>
+<p>En macOS, si <code>watch</code> no está instalado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>clear<span class="p">;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>ps<span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</code></pre></div>
+<p>Detenga el bucle con <code>Ctrl+C</code>.</p>
+<h2 id="5-verificacion-funcional">5. Verificación funcional</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:4200/<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Frontend OK"</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:8090/actuator/health
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>http://localhost:8090/swagger-ui.html<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Swagger OK"</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:8761/<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Eureka OK"</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:3000/api/health
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:9090/-/ready
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>medizano-loki<span class="w"> </span>wget<span class="w"> </span>-qO-<span class="w"> </span>http://localhost:3100/ready
+</code></pre></div>
+<p>Resultados esperados:</p>
+<ul>
+<li>Gateway: <code>{"status":"UP"}</code>.</li>
+<li>Grafana: base de datos <code>ok</code>.</li>
+<li>Prometheus: <code>Prometheus Server is Ready.</code>.</li>
+<li>Loki: <code>ready</code>.</li>
+</ul>
+<h2 id="6-verificar-los-targets-de-prometheus">6. Verificar los targets de Prometheus</h2>
+<p>Con <code>jq</code> instalado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:9090/api/v1/targets<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.data.activeTargets[] | [.labels.job, .health, .lastError] | @tsv'</span>
+</code></pre></div>
+<p>Todos estos jobs deben quedar <code>up</code>:</p>
+<ul>
+<li><code>api-gateway</code></li>
+<li><code>catalogo-ms</code></li>
+<li><code>cliente-ms</code></li>
+<li><code>facturacion-ms</code></li>
+<li><code>inventario-ms</code></li>
+<li><code>orden-ms</code></li>
+<li><code>pago-ms</code></li>
+<li><code>usuario-ms</code></li>
+<li><code>prometheus</code></li>
+</ul>
+<p>Para mostrar solo fallos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>http://localhost:9090/api/v1/targets<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.data.activeTargets[] | select(.health != "up") | [.labels.job, .lastError] | @tsv'</span>
+</code></pre></div>
+<p>Una salida vacía significa que no hay targets caídos.</p>
+<h2 id="7-accesos">7. Accesos</h2>
+<h3 id="desde-el-mismo-equipo">Desde el mismo equipo</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicación</td>
+<td><a href="http://localhost:4200">http://localhost:4200</a></td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td><a href="http://localhost:8090">http://localhost:8090</a></td>
+</tr>
+<tr>
+<td>Swagger</td>
+<td><a href="http://localhost:8090/swagger-ui.html">http://localhost:8090/swagger-ui.html</a></td>
+</tr>
+<tr>
+<td>Eureka</td>
+<td><a href="http://localhost:8761">http://localhost:8761</a></td>
+</tr>
+<tr>
+<td>Grafana</td>
+<td><a href="http://localhost:3000">http://localhost:3000</a></td>
+</tr>
+<tr>
+<td>Prometheus</td>
+<td><a href="http://localhost:9090">http://localhost:9090</a></td>
+</tr>
+</tbody>
+</table>
+<p>Loki no ofrece un panel para usuarios. Sus logs se consultan en <strong>Grafana → Explore</strong> usando el datasource Loki.</p>
+<h3 id="publicados-en-internet">Publicados en Internet</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicación</td>
+<td><a href="https://medizano.sbs/">https://medizano.sbs/</a></td>
+</tr>
+<tr>
+<td>Swagger</td>
+<td><a href="https://medizano.sbs/swagger-ui.html">https://medizano.sbs/swagger-ui.html</a></td>
+</tr>
+<tr>
+<td>Estado del Gateway</td>
+<td><a href="https://medizano.sbs/actuator/health">https://medizano.sbs/actuator/health</a></td>
+</tr>
+<tr>
+<td>Documentación</td>
+<td><a href="https://aldo-ct.github.io/Medizano-Docs/">https://aldo-ct.github.io/Medizano-Docs/</a></td>
+</tr>
+</tbody>
+</table>
+<p>Grafana, Prometheus y Loki no están publicados directamente. Para administrarlos a distancia sin abrir sus puertos, utilice un túnel SSH hacia el VPS:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ssh<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span>-L<span class="w"> </span><span class="m">3000</span>:127.0.0.1:3000<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span>-L<span class="w"> </span><span class="m">9090</span>:127.0.0.1:9090<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span>usuario@servidor
+</code></pre></div>
+<p>Mientras la sesión permanezca abierta, Grafana estará disponible en <code>http://localhost:3000</code> y Prometheus en <code>http://localhost:9090</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Seguridad</p>
+<p>No publique Prometheus ni Loki sin una capa de autenticación y control de acceso. Si se necesita un panel accesible desde cualquier lugar, exponga únicamente Grafana mediante HTTPS y autenticación fuerte.</p>
+</div>
+<h2 id="8-logs-y-diagnostico">8. Logs y diagnóstico</h2>
+<p>Logs generales recientes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>logs<span class="w"> </span>--since<span class="w"> </span>10m
+</code></pre></div>
+<p>Servicios principales:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--since<span class="w"> </span>10m<span class="w"> </span>api-gateway<span class="w"> </span>usuario-ms<span class="w"> </span>pago-ms<span class="w"> </span>orden-ms
+</code></pre></div>
+<p>Observabilidad:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>logs<span class="w"> </span>--since<span class="w"> </span>10m<span class="w"> </span>prometheus<span class="w"> </span>loki<span class="w"> </span>grafana-alloy<span class="w"> </span>grafana
+</code></pre></div>
+<p>Reiniciar solamente un componente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>restart<span class="w"> </span>nombre-del-servicio
+</code></pre></div>
+<p>Reconstruir solamente un microservicio modificado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>build<span class="w"> </span>nombre-del-servicio
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--no-deps<span class="w"> </span>nombre-del-servicio
+</code></pre></div>
+<h2 id="9-produccion">9. Producción</h2>
+<p>En el VPS, con DNS y <code>.env</code> ya configurados:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span>--profile<span class="w"> </span>observability<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</code></pre></div>
+<p>Después:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span>--profile<span class="w"> </span>observability<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span>ps
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>./deploy/verify-production.sh
+</code></pre></div>
+<h2 id="10-detener-el-entorno">10. Detener el entorno</h2>
+<p>Detener conservando datos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>--profile<span class="w"> </span>observability<span class="w"> </span>down
+</code></pre></div>
+<p>No agregue <code>-v</code> salvo que quiera eliminar deliberadamente las bases, métricas, logs y configuración persistente.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </article>
+            </div>
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+
+
+
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+
+
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+
+
+  </body>
+</html>

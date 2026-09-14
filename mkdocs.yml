@@ -40,6 +40,7 @@ nav:
   - Flujos de negocio:
       - Ventas y pagos: flujos/ventas-pagos.md
   - Operación:
+      - Guía de levantamiento: operacion/levantamiento.md
       - Despliegue y configuración: operacion/despliegue.md
       - Verificación y soporte: operacion/verificacion.md
   - Proyecto Sello:

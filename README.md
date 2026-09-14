@@ -25,6 +25,8 @@ Grafana, Prometheus y Loki están configurados en el perfil Docker `observabilit
 
 > No se deben usar `https://medizano.sbs/grafana/`, `/prometheus/` o `/loki/` como enlaces de observabilidad: esas rutas no están configuradas en el proxy y actualmente cargan el frontend. Para habilitar acceso remoto se recomienda publicar solamente Grafana, protegido con HTTPS y autenticación; Prometheus y Loki deben permanecer en la red privada.
 
+La secuencia completa de inicio, verificación, diagnóstico y recuperación está en la [guía de levantamiento](https://aldo-ct.github.io/Medizano-Docs/operacion/levantamiento/).
+
 ## Vista local
 
 ```bash
